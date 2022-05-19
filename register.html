@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+
+
+Country
+State/province
+
+    <!-- Navigation bar -->
+    <div>
+      <a href="calculator.html">CALCULATOR</a>
+      <a href="index.html">ABOUT ME</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="#contact">LET'S TALK</a>
+      <a href="register.html">Sign Up</a>
+      <a href="login.html">Log In</a>
+    
+    <!-- Contact section head -->
+    <div>
+      <h1>Registration Form</h1>
+      <p>
+        Sign up for more information on your favorite tech stack.
+      </p>
+    </div>
+
+    <!-- contact message form. redirects messages to my email inbox. -->
+    <div>
+        <form action="https://formspree.io/f/mnqwlypv" method="POST">
+            <!-- Bio field -->
+            <fieldset>
+                <label>First Name: <input type="text" name="first-name" required /></label>
+                <label>Last Name: <input type="text" name="last-name" required /></label>
+			    <label>Email: <input type="email" name="email" id="email" required /></label>
+                <label>Phone No: <input type="tel" name="phone" id="phone-number" required /></label>
+                <label>Gender: 
+                    <select name="referrer">
+					    <option value="">(select gender)</option>
+					    <option value="1">Male</option>
+					    <option value="2">Female</option>
+					    <option value="3">Prefer not to say</option>
+				    </select>
+                </label>
+		    </fieldset>
+
+            <!-- Authentication detail field -->
+            <fieldset>
+                <label>Username: <input type="text" name="username"></label>
+                <label>Password: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
+                <label>Confirm Password: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
+            </fieldset>
+
+            <!-- Address -->
+		    <fieldset>
+                <label></label>
+			    <label>Country: <input type="text" name="country" required /></label>
+			    <label>State/province: <input type="text" name="state" /></label>
+			
+            <!-- Validation -->
+            <label>
+				<input type="checkbox" name="terms" class="inline" required /> I accept the <a href="#">terms and conditions</a>
+			</label>
+            <label>
+                <input type="checkbox" name="newsletter" class="inline" />I would like to recieve emails and newsletters from you.
+            </label>
+		</fieldset>
+		<fieldset>
+        <div>
+            <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+    
+    <footer>
+      &COPY;2022 | By.<a href="https://linktr.ee/chrisnzoka">Chris Nzoka-okoye</a>
+      <em>developer_icon</em> | <a href="#">AltSchool_Africa</a> School of Engineering
+    </footer>
+  </body>
+</html>
