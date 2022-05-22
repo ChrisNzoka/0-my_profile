@@ -9,88 +9,94 @@
   </head>
   <body>
     <!-- Navigation bar -->
-    <div>
+    <nav>
       <a href="calculator.html">CALCULATOR</a>
-      <a href="index.html">ABOUT ME</a>
-      <a href="#portfolio">PORTFOLIO</a>
-      <a href="contact.html">CONTACT</a>
-      <a href="#contact">LET'S TALK</a>
+      <a href="index.html">HOME</a>
+      <a href="#profile">ABOUT ME</a>
+      <a href="#contact-info">CONTACT</a>
+      <a href="#email">REACH OUT</a>
       <a href="register.html">Sign Up</a>
       <a href="login.html">Log In</a>
-    </div>
+    </nav>
     <!-- nav bar ends -->
-
-    <!-- welcome start -->
-    <div>
-      <h1><em>waving icon</em> Hello there!!!</h1>
-      <img src="./images/profile_image.png" alt="chris nzoka-okoye" />
-      <p>I AM</p>
-      <h1>CHRIS NZOKA-OKOYE</h1>
-      <p>Software Engineer</p>
-      <p>
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
-        mollitia fuga tempora earum tenetur facere aliquam accusantium odit
-        maxime voluptate atque, vitae voluptatem expedita nemo quia error
-        molestiae facilis distinctio."
-      </p>
-    </div>
-    <!-- welcome page ends -->
-
-    <!-- profile section -->
-    <div>
-      <img src="" alt="profile background">
-      <h1>LET'S MEET</h1>
-      <div>
-        <h2>BIO</h2>
+    <main>
+      <!-- welcome start -->
+      <section>
+        <h1><em>waving icon</em> Hello there!!!</h1>
+        <img src="./images/profile_image.png" alt="chris nzoka-okoye" />
+        <p>I AM</p>
+        <h1>CHRIS NZOKA-OKOYE</h1>
+        <p>Software Engineer</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id,
-          consequuntur?
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+          mollitia fuga tempora earum tenetur facere aliquam accusantium odit
+          maxime voluptate atque, vitae voluptatem expedita nemo quia error
+          molestiae facilis distinctio."
         </p>
-      </div>
-      <div>
-        <h2>EDUCATION AND CERTIFICATIONS</h2>
-        <p></p>
-      </div>
-      <div>
-        <h2>WORK EXPERIENCE</h2>
-      </div>
-      <div>
-        <h2>HOBBIES</h2>
-        <h2>WHAT I'M READING</h2>
-      </div>
-    </div>
-    <!-- profile section ends -->
+      </section>
+      <!-- welcome page ends -->
 
-    <!-- Contact section -->
-    <div>
-      <h1>CONTACT ME</h1>
-      <p>
-        Whether you're interested in working with me or just want to say hello,
-        I'd love to hear from you!
-      </p>
+      <!-- profile section -->
+      <section>
+        <img src="" alt="profile background" />
+        <h1>LET'S MEET</h1>
+        <div>
+          <h2>BIO</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id,
+            consequuntur?
+          </p>
+        </div>
+        <div>
+          <h2>EDUCATION AND CERTIFICATIONS</h2>
+          <p></p>
+        </div>
+        <div>
+          <h2>WORK EXPERIENCE</h2>
+        </div>
+        <div>
+          <h2>HOBBIES</h2>
+          <h2>WHAT I'M READING</h2>
+        </div>
+      </section>
+      <!-- profile section ends -->
 
-      <!-- contact message form. redirects messages to my email inbox. -->
-      <form action="https://formspree.io/f/mnqwlypv" method="POST">
-        <label for="Name">Your Name:</label>
-        <input type="text" id="Name" name="name" required />
-        <label>
-          Email:
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Your message:
-          <textarea name="message" required></textarea>
-        </label>
-        <!-- other form fields go here -->
-        <button type="submit">Send</button>
-      </form>
-    </div>
-    <!-- contact section ends -->
+      <!-- Contact section -->
+      <section>
+        <div>
+          <h1>CONTACT ME</h1>
+          <p>
+            Whether you're interested in working with me or just want to say
+            hello, I'd love to hear from you!
+          </p>
+        </div>
 
-    <div>
-    <!-- contact info section -->
+        <div>
+          <!-- contact message form. redirects messages to my email inbox. -->
+          <form action="https://formspree.io/f/mnqwlypv" method="POST">
+            <label for="Name">Your Name:</label>
+            <input type="text" id="Name" name="name" required />
+            <label>
+              Email:
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Your message:
+              <textarea name="message" required></textarea>
+            </label>
+            <!-- other form fields go here -->
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+      <!-- contact section ends -->
 
-    <!-- contact info section ends -->
+      <section>
+        <!-- contact info section -->
+
+        <!-- contact info section ends -->
+      </section>
+    </main>
 
     <!-- footer -->
     <footer>
@@ -101,6 +107,5 @@
       Engineering
     </footer>
     <!-- end footer -->
-    </div>
   </body>
 </html>
