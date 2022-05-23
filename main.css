@@ -1,3 +1,254 @@
-:root{
-    --color1: ;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap");
+
+:root {
+  --color1: #090a0b;
+  --color2b: #001630;
+  --color2: #002147;
+  --color3: #70b6fc;
+  --color4: #99beff;
+  --color5: #e4e7ee;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Ubuntu, "Raleway", sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+/* nav bar */
+header {
+  background-color: var(--color2);
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 62px;
+  position: sticky;
+  top: 0;
+  z-index: 6;
+}
+
+header i, .nav-button{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.fa-person-shelter{
+  color: var(--color3);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+  list-style: none;
+}
+
+nav > ul > li {
+  color: var(--color5);
+  margin: 0 0.2rem;
+  padding: 0.9rem;
+  display: flex;
+  font-weight: 500;
+  font-size: small;
+}
+
+nav > ul > li:hover {
+  color: var(--color3);
+  cursor: pointer;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+.btn {
+  padding: 9px 25px;
+  background-color: var(--color3);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: var(--color5);
+  transition: all 0.3s ease 0s;
+}
+
+/* .btn.primary{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background: var(--color3) ;
+    box-shadow:inset .2rem .2rem 1rem var(--color4),
+              inset -.2rem -.2rem 1rem var(--color2),
+              $shadow;
+    color: var(--greyLight-1);
+
+    &:hover { color: var(--white); }
+    &:active {
+      box-shadow:inset .2rem .2rem 1rem var(--primary-dark), 
+             inset -.2rem -.2rem 1rem var(--primary-light);
+
+} */
+
+/* buttons 
+
+.btn{
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  box-shadow: violet;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .3s ease;
+
+  &_primary {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background: ;
+    box-shadow:inset .2rem .2rem 1rem var(--primary-light), 
+              inset -.2rem -.2rem 1rem var(--primary-dark),
+              $shadow;
+    color: var(--greyLight-1);
+
+    &:hover { color: var(--white); }
+    &:active {
+      box-shadow:inset .2rem .2rem 1rem var(--primary-dark), 
+             inset -.2rem -.2rem 1rem var(--primary-light);
+    }
+  }
+
+  &_secondary {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    color: var(--greyDark);
+    &:hover { color: var(--primary); }
+    &:active {
+      box-shadow: $inner-shadow;
+    }
+  }
+end buttons */
+
+
+#home-page{
+  background-color: var(--color2);
+  align-items: center;
+  align-content: center;
+  /* display:flex; */
+
+}
+
+.txt-img-circle{
+  display: flex;
+}
+
+.circle-design{
+  background-color: var(--color2b);
+  border-radius: 50%;
+  width: 550px;
+  height: 550px;
+  position: relative;
+  top: 50px;
+  left: 250px;
+  z-index: 1;
+  
+}
+
+.txt{
+  color: var(--color5);
+  height: auto;
+  position: relative;
+  top: 100px;
+  left: 200px;
+  z-index: 3;
+  border: 2px solid blanchedalmond;
+}
+
+.txt > h1:nth-of-type(1){
+  background-color: #001630;
+}
+
+.txt > h1:nth-of-type(2){
+  font-size: 50%;
+  background-color: #70b6fc;
+}
+
+.txt > h1:nth-of-type(3){
+  font-size: 50%;
+  background-color: #001630;
+}
+
+.txt > p{
+  background-color: #70b6fc;
+}
+
+#home-img{
+  position: relative;
+  right: 200px;
+  top: -90px;
+  z-index: 2;
+}
+
+.goal{
+  position: relative;
+  z-index: 3;
+}
+/* a {
+	color: var(--color3);
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:hover {
+  color: var(--color3);
+  background-color: transparent;
+  text-decoration: underlined;
+  cursor: pointer;
+}
+
+a:visited {
+	color: var(--color2);
+	background-color: transparent;
+	text-decoration: none;
+}
+
+
+a:active {
+	color: var(--color2);
+	background-color: transparent;
+	text-decoration: underlined;
+} */

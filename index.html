@@ -6,32 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
     <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/509d489617.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Navigation bar -->
-    <nav id="nav-bar">
-      <ul>
-        <li><a href="index.html">ABOUT ME</a></li>
-        <li><a href="#contact-me">CONTACT ME</a></li>
-        <li><a href="calculator.html">CALCULATOR</a></li>
-        <li><a href="register.html">Sign Up</a></li>
-        <li><a href="login.html">Log In</a></li>
-      </ul>
-    </nav>
+    <header>
+      <i class="fa-solid fa-person-shelter"></i>
+      <nav>
+        <ul>
+          <li><a href="index.html">ABOUT ME</a></li>
+          <li><a href="#contact-me">CONTACT ME</a></li>
+          <li><a href="calculator.html">CALCULATOR</a></li>
+          <li><a href="https://chrisnzoka.hashnode.dev">BLOG</a></li>
+        </ul>
+      </nav>
+      <div class="nav-button">
+        <a href="register.html"><button class="btn primary">Sign Up</button></a>
+        <a href="login.html"><button class="btn secondary">Log In</button></a>
+      </div>
+    </header>
     <!-- nav bar ends -->
     <main>
       <!-- welcome start -->
-      <section>
-        <h1><em>waving icon</em> Hello there!!! I am</h1>
-        <h1>CHRIS</h1>
-        <h1>NZOKA-OKOYE</h1>
-        <p>
-          A skilled Technical support specialist, Technical writer and Software
-          Engineer
-        </p>
-        <div class="circle-design"></div>
-        <img src="./images/hands_behind.png" alt="Chris Nzoka-okoye" />
-        <blockquote>
+      <section id="home-page">
+        <div class="txt-img-circle">
+          <div class="txt">
+            <h1>&#128075; Hello there!!! I am</h1>
+            <h1>CHRIS</h1>
+            <h1>NZOKAOKOYE</h1>
+            <p>
+              A skilled Technical support specialist, Technical writer and
+              Software Engineer
+            </p>
+          </div>
+          <div class="img-circle">
+            <div class="circle-design"></div>
+          </div>
+          <img
+            src="./images/hands_behind.png"
+            alt="Chris Nzoka-okoye"
+            id="home-img"
+          />
+        </div>
+        <blockquote class="goal">
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
           mollitia fuga tempora earum tenetur facere aliquam accusantium odit
           maxime voluptate atque, vitae voluptatem expedita nemo quia error
@@ -108,12 +128,66 @@
         <!-- Hobbies, my readings, technical and proffesional skills -->
         <div>
           <div>
-          <h2>TECHNICAL SKILLS</h2>
+            <h2>TECHNICAL SKILLS</h2>
           </div>
+
           <div>
-          <h2>Professional </h2>
-          <h2>HOBBIES</h2>
-          <h2>WHAT I'M READING</h2>
+            <h2>Professional</h2>
+          </div>
+
+          <div>
+            <h2>HOBBIES</h2>
+          </div>
+          <!-- Books -->
+          <div>
+            <h2>What I'm Reading</h2>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Articles -->
+        <div class="article">
+          <h2>Latest from my desk</h2>
+          <div class="article1">
+            <img src="" alt="article on hashnode" />
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <q
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
+              quasi beatae, expedita earum aliquid architecto esse sed quae
+              consectetur libero veritatis, doloribus, debitis aliquam porro
+              dignissimos reprehenderit pariatur sunt doloremque...</q
+            >
+            <a href="#" target="_blank"
+              ><button type="button" class="read-more">Read More</button></a
+            >
+          </div>
+          <div class="article2">
+            <img src="" alt="article on hashnode" />
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <q
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
+              quasi beatae, expedita earum aliquid architecto esse sed quae
+              consectetur libero veritatis, doloribus, debitis aliquam porro
+              dignissimos reprehenderit pariatur sunt doloremque...</q
+            >
+            <a href="#" target="_blank"
+              ><button type="button" class="read-more">Read More</button></a
+            >
+          </div>
+          <div class="article3">
+            <img src="" alt="article on hashnode" />
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <q
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
+              quasi beatae, expedita earum aliquid architecto esse sed quae
+              consectetur libero veritatis, doloribus, debitis aliquam porro
+              dignissimos reprehenderit pariatur sunt doloremque...</q
+            >
+            <a href="#" target="_blank"
+              ><button type="button" class="read-more">Read More</button></a
+            >
+          </div>
+          <!-- Article ends -->
         </div>
       </section>
       <!-- profile section ends -->
@@ -141,15 +215,15 @@
 
             <label>
               Your Message:
-              <textarea name="message" required></textarea>
+              <textarea name="message" rows="" required></textarea>
             </label>
 
             <label for="priority">Priority</label>
             <select name="priority" id="priority">
-					    <option value="">(How Urgent?)</option>
-					    <option value="urgent">Very Urgent</option>
-					    <option value="moderate">Moderate</option>
-					    <option value="not">Not Urgent</option>
+              <option value="">(How Urgent?)</option>
+              <option value="urgent">Very Urgent</option>
+              <option value="moderate">Moderate</option>
+              <option value="not">Not Urgent</option>
             </select>
             <!-- other form fields go here -->
             <button type="submit">Send</button>
@@ -172,8 +246,8 @@
         &COPY;2022 | By.<a href="https://linktr.ee/chrisnzoka"
           >Chris Nzoka-okoye</a
         >
-        <em>developer_icon</em> | <a href="#">@altSchoolAfrica School of
-        Engineering</a>
+        <em>developer_icon</em> |
+        <a href="#">@altSchoolAfrica School of Engineering</a>
       </footer>
     </section>
     <!-- end footer -->
