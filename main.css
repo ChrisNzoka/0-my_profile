@@ -12,6 +12,14 @@
   margin: 0;
   padding: 0;
   font-family: Ubuntu, "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 /* nav bar */
@@ -19,7 +27,7 @@ header {
   background-color: var(--color1);
   color: var(--color2);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 62px;
@@ -35,12 +43,11 @@ header h1 {
   color: var(--color2);
 }
 
-
 header h1 span {
   color: var(--color3);
 }
 
-.logo{
+.logo {
   padding: 4%;
   text-decoration: none;
   transition: all 0.4s ease 0s;
@@ -53,7 +60,6 @@ header h1 span {
 }
 
 nav {
-  display: flex;
   align-content: center;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +109,7 @@ nav > ul > li > a:hover {
   font-weight: 500;
 }
 
-.btn1:hover { 
+.btn1:hover {
   background-color: var(--color1);
   color: var(--color2);
   border: 2px solid var(--color2);
@@ -111,8 +117,8 @@ nav > ul > li > a:hover {
 }
 
 .btn1:active {
-  box-shadow:inset .2rem .2rem 1rem var(--color2), 
-  inset -.2rem -.2rem 1rem var(--color2);
+  box-shadow: inset 0.2rem 0.2rem 1rem var(--color2),
+    inset -0.2rem -0.2rem 1rem var(--color2);
 }
 
 .btn2 {
@@ -127,7 +133,7 @@ nav > ul > li > a:hover {
   font-weight: 500;
 }
 
-.btn2:hover { 
+.btn2:hover {
   background-color: var(--color2);
   color: var(--color1);
   border: 2px solid var(--color2);
@@ -136,49 +142,49 @@ nav > ul > li > a:hover {
 
 .btn2:active {
   background-color: var(--color1);
-  box-shadow:inset .2rem .2rem 1rem var(--color2), 
-  inset -.2rem -.2rem 1rem var(--color2);
+  box-shadow: inset 0.2rem 0.2rem 1rem var(--color2),
+    inset -0.2rem -0.2rem 1rem var(--color2);
 }
 /* end button */
 /* end nav bar */
 
 /* home page */
-#home{
+.home_container {
   background-color: var(--color4);
   background-position: center;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 62px);
-  /* height: 100vh; */
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
 }
 
-.circle-design{
+.circle-design {
   background-color: var(--color3b);
   border-radius: 50%;
   width: 500px;
   height: 500px;
-  position: absolute;
   z-index: 1;
-  top: 20%;
-  left: 10%;
+  grid-area: 1 / 1 / 1 / 2;
+  margin: auto;
 }
 
-#home-img{
-  position: relative;
-  top: -2.1%;
-  left: 5%;
-  z-index: 2;
+#home-img {
+  position: absolute;
+  bottom: -2.3vh;
+  left: 12%;
 }
 
-.txt-block{
+.txt-block {
   color: var(--color2);
-  width: 40%;
-  position: relative;
-  z-index: 3;
+  width: 80%;
+  z-index: 2;
+  grid-area: 1 / 2 / 1 / 3;
+  align-self: center;
+  /* justify-self: center; */
 }
 
 .greeting {
@@ -188,27 +194,26 @@ nav > ul > li > a:hover {
   /* border-top: 4px solid var(--color2); */
 }
 
-.firstname{
+.firstname {
   font-size: 5rem;
   font-weight: 500;
 }
 
-.surname{
+.surname {
   font-size: 4.5rem;
   font-weight: 500;
 }
 
-.tagline{
-  height: 1rem;
+.tagline {
   font-weight: 700;
   color: var(--color1);
   background-color: var(--color3);
   text-align: center;
-  padding: 1% 0 1.5% 0;
+  padding: 0.3rem 0;
   border-radius: 2rem;
 }
 
-.goal{
+.goal {
   margin: 2rem auto;
   text-align: center;
   text-overflow: ellipsis;
@@ -217,22 +222,135 @@ nav > ul > li > a:hover {
 }
 /* end home-page */
 
+/* login */
+.login-container {
+  width: 100%;
+  height: calc(100vh - 124px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: url(./images/login-bg.jpg);
+}
 
+.form-bg {
+  background-color: #e4e7ee65;
+  width: 30vw;
+  height: 70vh;
+  align-self: center;
+  justify-self: center;
+  margin: auto;
+  border-radius: 2em;
+  color: var(--color2);
+}
 
+.login-container h1 {
+  margin: 2em auto;
+  text-align: center;
+}
 
+.login-container h1 span {
+  color: var(--color3);
+}
 
+.login-form {
+  display: block;
+  width: 20vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 1em;
+}
 
+.login-auth {
+  width: 100%;
+  min-height: 2.5em;
+  border: none;
+  border-bottom: 2px solid var(--color2);
+  border-radius: 1rem;
+  background-color: transparent;
+  display: block;
+  margin: 2rem 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color2);
+}
 
+ul li {
+  display: block;
+  text-align: center;
+  padding: 5px 0 0 0;
+}
+
+li > a {
+  color: var(--color3);
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+li > a:hover {
+  text-decoration: underline;
+  transition: all 0.3s ease 0s;
+}
+
+.login-footer {
+  background-color: var(--color2);
+}
+input[type="submit"] {
+  padding: 9px 25px;
+  background-color: var(--color2);
+  border: 2px solid var(--color1);
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: var(--color5);
+  transition: all 0.3s ease 0s;
+  color: var(--color1);
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  margin: 1em 0 auto;
+  height: 2.5em;
+  font-size: 1.1rem;
+  min-width: 300px;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color1);
+  color: var(--color2);
+  border: 2px solid var(--color2);
+  transform: scale(1.1);
+}
+
+input[type="submit"]:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem var(--color2),
+    inset -0.2rem -0.2rem 1rem var(--color2);
+}
+
+/* end login */
 
 /* footer */
-footer{
+footer {
   background-color: var(--color2);
   color: var(--color1);
+  /* font-weight: 400; */
   display: flex;
-  justify-content:center ;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 62px;
   border-top: 0.1rem solid var(--color1);
+  /* position: static; */
+  /* bottom: 0; */
+  /* z-index: 12; */
+}
+
+footer a {
+  color: var(--color4);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--color3);
+  cursor: pointer;
 }
 /* end footer */

@@ -13,53 +13,76 @@
   </head>
   <body>
     <!-- Navigation bar -->
-      <header>
-        <a href="index.html" class="logo"
-          ><h1>Portfo<span>lio</span></h1></a
-        >
-        <nav>
-          <ul>
-            <li><a href="index.html">ABOUT ME</a></li>
-            <li><a href="#contact">CONTACT ME</a></li>
-            <li><a href="calculator.html">CALCULATOR</a></li>
-            <li><a href="https://chrisnzoka.hashnode.dev">BLOG</a></li>
-          </ul>
-        </nav>
-        <div class="nav-btn">
-          <a href="register.html"><button class="btn1">Sign Up</button></a>
-          <a href="login.html"><button class="btn2">Log In</button></a>
-        </div>
-      </header>
-      <!-- nav bar ends -->
+    <header>
+      <a href="index.html" class="logo"
+        ><h1>Portfo<span>lio</span></h1></a
+      >
+      <nav>
+        <ul>
+          <li><a href="index.html">ABOUT ME</a></li>
+          <li><a href="#contact">CONTACT ME</a></li>
+          <li><a href="calculator.html">CALCULATOR</a></li>
+          <li><a href="https://chrisnzoka.hashnode.dev">BLOG</a></li>
+        </ul>
+      </nav>
+      <div class="nav-btn">
+        <a href="register.html"><button class="btn1">Sign Up</button></a>
+        <a href="login.html"><button class="btn2">Sign In</button></a>
+      </div>
+    </header>
+    <!-- nav bar ends -->
 
     <!-- Login field-->
-    <fieldset>
-      <label for="username">Username or Email: </label>
-      <input type="text" name="username" id="username" autocomplete="on" required/>
-      <label for="password">Password: </label>
-      <input type="password" id="password" name="password" required/>
-      <a href="#">Forgot password?</a>
-    </fieldset>
-
-    <!-- login button -->
-    <div>
-      <button type="submit">Sign In</button>
+    <div class="login-container">
+      <div class="form-bg">
+        <h1>Welc<span>ome</span></h1>
+        <form
+          action="https://formspree.io/f/mnqwlypv"
+          method="POST"
+          class="login-form"
+        >
+          <input
+            type="text"
+            name="username"
+            autocomplete="on"
+            placeholder="Your Email"
+            class="login-auth"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Your Password"
+            class="login-auth"
+            required
+          />
+          <label><input type="checkbox" /> remember me</label>
+          <!-- login button -->
+          <input type="submit" value="Sign In" />
+        </form>
+        <ul>
+          <li><a href="#">Forgot password?</a></li>
+          <li>Don't have an account? <a href="./register.html">Sign Up</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- login field ends -->
-    <div>
-    <!-- contact info section -->
 
-    <!-- contact info section ends -->
+    <!-- login field ends -->
 
     <!-- footer -->
     <footer>
-      &COPY;2022 | By.<a href="https://linktr.ee/chrisnzoka"
-        >Chris Nzoka-okoye</a
-      >
-      <em>developer_icon</em> | <a href="#">AltSchool_Africa</a> School of
-      Engineering
+      <p>
+        &COPY;2022 | By
+        <a href="https://linktr.ee/chrisnzoka" target="_blank"
+          >Chris Nzoka-okoye</a
+        >
+        👨‍💻🎓 |
+        <a href="https://altschoolafrica.com" target="_blank"
+          >@AltSchoolAfrica</a
+        >
+        School of Engineering 🏫
+      </p>
     </footer>
     <!-- end footer -->
-    </div>
   </body>
 </html>
