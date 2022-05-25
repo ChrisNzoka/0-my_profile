@@ -1,4 +1,6 @@
-# 0-my_profile
+# my_profile
+
+[![Run on Repl.it](https://repl.it/badge/github/ChrisNzoka/my_profile.git)](https://repl.it/github/ChrisNzoka/my_profile.git)
 
 Objective: Build a simple HTML & CSS driven web application made up of a few linked pages and styled content
 
