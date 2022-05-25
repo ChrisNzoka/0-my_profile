@@ -24,7 +24,7 @@ body {
 
 /* nav bar */
 header {
-  background-color: var(--color1);
+  background-color: transparent;
   color: var(--color2);
   display: flex;
   justify-content: space-around;
@@ -89,6 +89,7 @@ nav > ul > li > a {
 nav > ul > li > a:hover {
   color: var(--color3);
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* start button */
@@ -225,7 +226,7 @@ nav > ul > li > a:hover {
 /* login */
 .login-container {
   width: 100%;
-  height: calc(100vh - 124px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -293,7 +294,8 @@ li > a:hover {
 }
 
 .login-footer {
-  background-color: var(--color2);
+  background-color: transparent;
+  border: none;
 }
 input[type="submit"] {
   padding: 9px 25px;
@@ -327,10 +329,24 @@ input[type="submit"]:active {
 
 /* end login */
 
+/* register/signup */
+.register-body{
+  background: url(./images/sigup-bg.jpg);
+}
+
+.register-header{
+  background-color: #e4e7ee50;
+}
+
+
+
+/* end register/signup */
+
 /* footer */
 footer {
   background-color: var(--color2);
   color: var(--color1);
+  font-size: smaller;
   /* font-weight: 400; */
   display: flex;
   justify-content: center;
