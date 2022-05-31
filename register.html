@@ -6,104 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <link rel="stylesheet" href="main.css" />
-    <link rel="icon" type="image/x-icon" href="./images/favicon/signin.png">
+    <link rel="icon" type="image/x-icon" href="./images/favicon/signin.png" />
   </head>
   <body class="register-body">
     <!-- Navigation bar -->
-      <header class="register-header">
-        <a href="index.html" class="logo"
-          ><h1>Portfo<span>lio</span></h1></a
+    <header class="register-header">
+      <a href="index.html" class="logo"
+        ><h1 class="register-logo">Portfo<span>lio</span></h1></a
+      >
+      <nav>
+        <ul>
+          <li><a href="index.html">ABOUT ME</a></li>
+          <li><a href="#contact">CONTACT ME</a></li>
+          <li><a href="calculator.html">CALCULATOR</a></li>
+          <li><a href="https://chrisnzoka.hashnode.dev">BLOG</a></li>
+        </ul>
+      </nav>
+      <div class="nav-btn">
+        <a href="register.html"><button class="btn1">Sign Up</button></a>
+        <a href="login.html"
+          ><button class="btn2 register-btn2">Sign In</button></a
         >
-        <nav>
-          <ul>
-            <li><a href="index.html">ABOUT ME</a></li>
-            <li><a href="#contact">CONTACT ME</a></li>
-            <li><a href="calculator.html">CALCULATOR</a></li>
-            <li><a href="https://chrisnzoka.hashnode.dev">BLOG</a></li>
-          </ul>
-        </nav>
-        <div class="nav-btn">
-          <a href="register.html"><button class="btn1">Sign Up</button></a>
-          <a href="login.html"><button class="btn2">Sign In</button></a>
-        </div>
-      </header>
-      <!-- nav bar ends -->
-    
+      </div>
+    </header>
+    <!-- nav bar ends -->
+
     <!-- Contact section head -->
-    
+
     <!-- contact message form. redirects messages to my email inbox. -->
-    <div>
-      <form action="https://formspree.io/f/mnqwlypv" method="POST">
-            <caption>
-            <h1>Registration Form</h1>
-            <p>Please fill out this form with the required information</p>
-            </caption>
-            
-            <!-- Bio field -->
-            <fieldset>
-                <label>First Name: <input type="text" name="first-name" required /></label>
-                <label>Last Name: <input type="text" name="last-name" required /></label>
-			    <label>Email: <input type="email" name="email" id="email" required /></label>
-                <label>Phone No: <input type="tel" name="phone" id="phone-number" required /></label>
-                <label>Gender: 
-                    <select name="referrer">
-					    <option value="">(select gender)</option>
-					    <option value="1">Male</option>
-					    <option value="2">Female</option>
-					    <option value="3">Prefer not to say</option>
-				    </select>
-                </label>
-		    </fieldset>
-
-            <!-- Authentication detail field -->
-            <fieldset>
-                <label>Username: <input type="text" name="username"></label>
-                <label>Password: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
-                <label>Confirm Password: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
-            </fieldset>
-
-            <!-- Address -->
-		    <fieldset>
-          <label>Address: <input type="text" name="address" required/></label>
-          <label for="city">City: </label>
-          <input type="text" id="city" name="city" required/>
-			    <label>State/province: <input type="text" name="state" /></label>
-			    <label>Country: <input type="text" name="country" required /></label>
-			
-            <!-- Validation -->
-            <label>
-				<input type="checkbox" name="terms" class="inline" required /> I accept the <a href="#">terms and conditions</a>
-			</label>
-            <label>
-                <input type="checkbox" name="newsletter" class="inline" />I would like to recieve emails and newsletters from you.
-            </label>
-		</fieldset>
-		<fieldset>
-        <div>
-            <button type="submit">Send</button>
-        </div>
-      </form>
+    <div class="rg-heading">
+      <h1>Registration Form</h1>
+      <p>Please fill out this form with the required information</p>
     </div>
-    <div>
-    <!-- contact info section -->
+    <form
+      action="https://formspree.io/f/mnqwlypv"
+      method="POST"
+      class="register-form"
+    >
+      <!-- Bio field -->
+      <fieldset>
+        <label
+          >First Name: <input type="text" name="first-name" required
+        /></label>
+        <label
+          >Last Name: <input type="text" name="last-name" required
+        /></label>
+        <label
+          >Email: <input type="email" name="email" id="email" required
+        /></label>
+        <label
+          >Phone No: <input type="tel" name="phone" id="phone-number" required
+        /></label>
+        <label
+          >Gender:
+          <select name="referrer">
+            <option value="">(select gender)</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Prefer not to say</option>
+          </select>
+        </label>
+      </fieldset>
 
-    <!-- contact info section ends -->
+      <!-- Address -->
+      <fieldset>
+        <label>Address: <input type="text" name="address" required /></label>
+        <label for="city">City: </label>
+        <input type="text" id="city" name="city" required />
+        <label>State/province: <input type="text" name="state" /></label>
+        <label>Country: <input type="text" name="country" required /></label>
+      </fieldset>
 
-    <!-- footer -->
-    <footer class="login-footer">
-        <p>
-          &COPY;2022 | By
-          <a href="https://linktr.ee/chrisnzoka" target="_blank"
-            >Chris Nzoka-okoye</a
-          >
-          👨‍💻🎓 |
-          <a href="https://altschoolafrica.com" target="_blank"
-            >@AltSchoolAfrica</a
-          >
-          School of Engineering 🏫
-        </p>
-      </footer>
-    <!-- end footer -->
-    </div>
+      <!-- Authentication -->
+      <fieldset>
+        <label>Username: <input type="text" name="username" required /></label>
+        <label
+          >Password:
+          <input
+            type="password"
+            name="password"
+            pattern="[a-z0-5]{8,}"
+            required
+        /></label>
+        <label
+          >Confirm Password:
+          <input
+            type="password"
+            name="password"
+            pattern="[a-z0-5]{8,}"
+            required
+        /></label>
+      </fieldset>
+      <div class="rg-submit">
+        <label>
+          <input type="checkbox" name="terms" class="inline" required /> I
+          accept the <a href="#">terms and conditions</a>
+        </label>
+        <br />
+        <br>
+        <label>
+          <input type="checkbox" name="newsletter" class="inline" /> I would like
+          to recieve emails and newsletters from you.
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <!-------------------------------------------- footer start ------------------------------------------>
+    <footer>
+      <p>&COPY;2022 &nbsp;</p>
+      <p>
+        | By
+        <a href="https://linktr.ee/chrisnzoka" target="_blank"
+          >Chris Nzoka-okoye</a
+        >👨‍💻🎓 &nbsp;
+      </p>
+      <p>
+        |
+        <a href="https://altschoolafrica.com" target="_blank"
+          >@AltSchoolAfrica</a
+        >
+      </p>
+      <p>School of Engineering 🏫</p>
+    </footer>
+    <!------------------------------------------ end footer ------------------------------------------------>
   </body>
 </html>

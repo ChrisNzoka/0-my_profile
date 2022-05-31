@@ -2,7 +2,7 @@
 
 :root {
   --color1: #e4e7ee;
-  --color1b: #e4e7eeb0;
+  --color1b: #e4e7eee0;
   --color2: #0f1013;
   --color2b: #0f101379;
   --color3: #da0404;
@@ -260,43 +260,83 @@ nav > ul > li > a:hover {
 .education {
   grid-area: education;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(62px, auto);
-  justify-content: space-evenly;
+  grid-template-columns: 1fr 4fr 1fr;
   width: 100%;
-  justify-self: center;
-  /* background-color: rgba(0, 0, 0, 0.74); */
   background-color: var(--color1b);
 }
 
 .edu-title {
-  grid-area: 1 / 1 / 2 / 3;
-  color: var(--color3);
-  font-size: x-large;
-  font-weight: 500;
-  text-shadow: 1px 1px 2px #000000b0;
-  justify-self: start;
-  align-self: center;
-  padding: 1rem;
-  margin: 10px 0 10px 0;
-  background-color: var(--color1);
-  border-start-end-radius: 2rem;
+  grid-area: 1 / 1 / 2 / 4;
+  padding: 7vw 0 5vw 7vw;
 }
 
-.edu-image{
+.edu-title > h1 {
+  font-size: xx-large;
+  font-weight: 500;
+  width: 35vw;
+  padding: 1%;
+  text-align: center;
+  color: var(--color1);
+  text-shadow: 1px 1px 2px #000000b0;
+  background-color: var(--color3);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+.edu-title > p {
+  width: 35vw;
+  text-align: center;
+  font-weight: 400;
+  font-style: oblique;
 }
 
 .edu {
   grid-area: 2 / 2 / 3 / 3;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  row-gap: 20px;
+  grid-template-columns: repeat(11, 1fr);
+  row-gap: 2rem;
 }
 
-.edu1{
-  grid-column: 1 / span 2;
+.certificate {
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: var(--color1);
+  border-bottom: 4px solid var(--color3);
+  display: flex;
+  padding: 5%;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.certificate img {
+  /* border-radius: 50%; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 5rem;
+}
+
+.edu_content h1 {
+  color: var(--color3);
+}
+
+.edu1 {
+  grid-column: 1 / span 9;
+}
+
+.edu2 {
+  grid-column: 3 / span 9;
+}
+
+.edu3 {
+  grid-column: 1 / span 9;
+}
+
+.edu4 {
+  grid-column: 3 / span 9;
+}
+
+.edu5 {
+  grid-column: 1 / span 9;
 }
 
 /* end education */
@@ -318,12 +358,12 @@ nav > ul > li > a:hover {
   height: 369px;
   width: 95%;
 */
-  /* background: transparent; */
+/* background: transparent; */
 /*
   border-radius: 10px;
   transition: border 1s;
 */
-  /* position: relative; */
+/* position: relative; */
 /*
 }
 
@@ -339,7 +379,7 @@ nav > ul > li > a:hover {
   transition: background 0.8s;
   overflow: hidden;
 */
-  /* background: black; */
+/* background: black; */
 /*
   box-shadow: 0 70px 63px -60px #000000;
   display: flex;
@@ -372,7 +412,7 @@ nav > ul > li > a:hover {
 } */
 /* end job */
 
-.projects{
+.projects {
   grid-area: projects;
 }
 
@@ -418,7 +458,13 @@ footer a:hover {
 /* end footer */
 /* --------------------------------------------end home-page------------------------------------- */
 
-/* login */
+
+/* ----------------------------------------------- login ----------------------------------------- */
+
+.login-body {
+  background: url(./images/grad_bg.jpg);
+}
+
 .login-container {
   width: 100%;
   height: 100vh;
@@ -427,10 +473,9 @@ footer a:hover {
     "header"
     "content"
     "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: 62px, 1fr, 62px;
-  /* background: url(./images/login-bg.jpg); */
-  /* align-content:space-between; */
+  grid-template-rows: minmax(32px, auto);
+  align-content: space-between;
+  row-gap: 0px;
 }
 
 .login-container header {
@@ -442,15 +487,11 @@ footer a:hover {
   background-color: #e4e7ee65;
   width: 400px;
   /* height: 70vh; */
-  /* align-self: center;
+  align-self: center;
   justify-self: center;
-  margin: 20px auto;
+  /* margin: 20px auto; */
   border-radius: 2em;
-  color: var(--color2); */
-}
-
-.form-bg h1 {
-  padding-top: 20px;
+  /* color: var(--color2); */
 }
 
 .login-container h1 {
@@ -466,9 +507,9 @@ footer a:hover {
   display: block;
   width: 20vw;
   max-width: 500px;
-  min-width: 300px;
+  min-width: 200px;
   margin: auto auto;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 .login-auth {
@@ -488,7 +529,7 @@ footer a:hover {
 ul li {
   display: block;
   text-align: center;
-  padding: 5px 0 0 0;
+  padding: 5px 0 1rem  0;
 }
 
 li > a {
@@ -508,11 +549,13 @@ li > a:hover {
   border: none;
   position: absolute;
   bottom: 0%;
-  padding-top: 10px;
+  /* padding-top: 10px; */
+  max-height: 32px;
 }
+
 input[type="submit"] {
   padding: 9px 25px;
-  background-color: var(--color2);
+  background-color: rgb(2, 70, 2);
   border: 2px solid var(--color1);
   border-radius: 2rem;
   cursor: pointer;
@@ -521,11 +564,11 @@ input[type="submit"] {
   color: var(--color1);
   font-weight: 500;
   display: block;
-  width: 100%;
-  margin: 1em 0 auto;
+  width: 50%;
+  margin: 1em auto 0 auto;
   height: 2.5em;
   font-size: 1.1rem;
-  min-width: 300px;
+  min-width: 200px;
 }
 
 input[type="submit"]:hover {
@@ -539,16 +582,95 @@ input[type="submit"]:active {
   box-shadow: inset 0.2rem 0.2rem 1rem var(--color2),
     inset -0.2rem -0.2rem 1rem var(--color2);
 }
+/* ----------------------------------------- end login ------------------------------------------- */
 
-/* end login */
-
-/* register/signup */
+/* ---------------------------------------register/signup----------------------------------------- */
 .register-body {
   background: url(./images/sigup-bg.jpg);
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
 }
 
 .register-header {
   background-color: #e4e7ee50;
+  /* color: var(--color1); */
 }
 
-/* end register/signup */
+.register-logo{
+  color: var(--color1);
+}
+
+.register-header nav ul li{
+color: var(--color1);
+}
+
+.register-btn2{
+  color: var(--color1);
+  border-color: var(--color1);
+}
+
+.rg-heading{
+  color: var(--color1);
+  margin: 2rem auto 2rem auto;
+text-align: center;
+}
+
+.register-form{
+  display: block;
+  width: 50vw;
+  max-width: 800px;
+  min-width: 300px;
+  margin: auto auto;
+  /* background-color: var(--color2b); */
+  color: var(--color1);
+  /* padding-bottom: 2em; */
+}
+
+fieldset{
+  border: none;
+  margin: 2rem;
+  border-bottom: 5px double var(--color1b);
+}
+
+fieldset input{
+  width: 100%;
+  min-height: 2.5em;
+  border: 2px solid var(--color1);
+  border-radius: 0.7rem;
+  background-color: var(--color3b);
+  display: block;
+  margin: 0.5rem 0 1.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color2);
+}
+
+select{
+width: 100%;
+background-color: var(--color3b);
+border-radius: 0.5rem;
+height: 2.5rem;
+font-size: large;
+color: var(--color1);
+margin: 0.5rem 0 1.5rem 0;
+}
+
+.rg-submit button{
+  padding: 9px 5px;
+  background-color: rgb(2, 70, 2);
+  border: 2px solid var(--color1);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: var(--color5);
+  transition: all 0.3s ease 0s;
+  color: var(--color1);
+  font-weight: 500;
+  display: block;
+  width: 50%;
+  margin: 2em auto 2em auto;
+  height: 2.5rem;
+  font-size: 1.1rem;
+  min-width: 100px;
+}
+/* ------------------------------------end register/signup--------------------------------------- */
